@@ -33,30 +33,6 @@ if(scrollHeight > navHeight)
 }
 })
 
-
-let animation = document.querySelectorAll(".show-on-scroll");
-    function toggleAniWindow(element){    
-         //toa do h1
-         var rect = element.getClientRects()[0]
-         var heightScreen = window.innerHeight  
-
-         //check xem co phai ben trong hay khoong
-         if(!(rect.bottom < 0 || rect.top > heightScreen)){
-         //ben trong
-             element.classList.add('start')
-         }
-         else {
-             //ben ngoai
-             element.classList.remove('start')
-         }
-    }
-    window.onscroll =function checkAnimation() {
-        animation.forEach(element => {     
-            toggleAniWindow(element)       
-        });
-
-}
-
 const navBtn = document.querySelector(".nav-btn");
 const navList= document.querySelector(".nav-list");
 const links = document.querySelector(".nav-links")
@@ -123,5 +99,4 @@ if(mainColor !== null)
     {
         element.classList.add("active");
     }
-
 }
